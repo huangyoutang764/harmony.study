@@ -1,0 +1,11 @@
+h2{
+    color:blue;
+
+}
+p{
+    background-image:linear-gradient(-90deg,yellowgreen,aqua);
+    /* background-color:aqua; */
+    color:green;
+    height: 50px;
+    width: 400px;
+}

@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器</title>
+    <style>
+        #test{
+            background-color: aqua;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h3>选择器的使用</h3>
+    <hr>
+    <p>不定义id的选择器</p>
+    <p id="test">定义id为test</p>
+</body>
+</html> -->
+
+<!-- 上为id选择器 -->
+
+<!-- 选择器 类 class -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class类选择器</title>
+    <style>
+        .color1{
+            color:red;
+        }
+        .color2{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h3 class="color1">类选择器class</h3>
+    <hr>
+    <p class="color2">类选择器，蓝色</p>
+    <br>
+
+    <p class="color1">类选择器红色</p>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器的应用</title>
+    <style>
+        img[alt ~= "balloon"]{/* ~= 表示模糊匹配*/
+            border: 20px solid yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h3>属性选择器的应用</h3>
+    <hr>
+    <h4>设置alt属性的图像红色边框</h4>
+    <img src="../images/热气球.jpg" alt="balloon">
+    <img src="../images/热气球.jpg" alt="balloon 2">
+</body>
+</html>
+ 
