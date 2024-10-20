@@ -1,0 +1,26 @@
+<script>
+    // 提示用户输入星星的阶数，并将输入的字符串转换为整数
+    let NUM_1 = prompt("输入星星阶数,正整数数值：");
+    NUM_1 = parseInt(NUM_1);
+    
+    // 检查输入是否为有效的正整数
+    if (NUM_1 <= 0 || isNaN(NUM_1)) {
+        document.write("输入数值错误，请输入正整数！"); // 如果输入不合法，提示错误信息
+    } else {
+        document.write("星星阶数为：" + NUM_1 + "阶。效果如下：<br/>");
+        document.write("______________________________________<br/>");
+
+        // 外层循环控制每一层的输出，num_1 从 NUM_1 递减到 1
+        for (let num_1 = 1; num_1 <= NUM_1; num_1++) {
+            // 打印左侧的空格，数量为 NUM_1 - num_1
+            for (let i = 1; i <= NUM_1 - num_1; i++) {
+                document.write("&nbsp;&nbsp;&nbsp;&nbsp;"); // 使用非断行空格
+            }
+            // 打印星星，数量为 2 * num_1 - 1
+            for (let j = 0; j < (num_1 * 2 - 1); j++) {
+                document.write("★"); // 打印星星，使用“★”符号
+            }
+            document.write("<br/>"); // 每一层结束后换行
+        }
+    }
+</script>

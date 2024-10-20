@@ -1,0 +1,11 @@
+<script>
+    let arr=[13,34,-213,12,-21]
+    for(let j=0;j<arr.length-1;j++){
+        for(let i=0;i<arr.length-1-j;i++){
+            if(arr[i]>arr[i+1]){
+                [arr[i],arr[i+1]]=[arr[i+1],arr[i]]
+                document.write(arr+'<br />')
+            }
+        }
+    }
+</script>

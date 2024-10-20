@@ -1,0 +1,221 @@
+<!-- 
+    // 数组的常用方法
+    join()
+    用于把数组中的所有元素转换成一个字符串。 
+    元素是通过指定分隔符进行分隔的，默认使用逗号作为分隔符。
+-->
+<!-- <script>
+    let arr=[1,3,4]
+    console.log(arr.join())
+    console.log(arr.join('-'))
+    console.log(arr)
+</script> -->
+
+<!-- push()方法
+ 
+用于从数组末尾向数组添加元素，可以添加一个或多个元素
+
+-->
+
+<!-- <script>
+    let arr = ['小数','吓到','阿雄'];
+    let count = arr.push('短发','覅了');
+    console.log(count)// 返回 新数组长度
+    console.log(arr)
+</script> -->
+
+<!-- pop()方法
+ 
+用于删除数组的最后一个元素，并返回删除的元素
+
+-->
+
+<!-- <script>
+    let arr = ['发达','风啊','分啊']
+    let item = arr.pop();
+    console.log(item);
+    console.log(arr);
+
+</script> -->
+
+<!-- shift() 方法
+ 用于吧数组的第一个元素删除，并返回第一个元素的值
+
+-->
+
+<!-- <script>
+let arr= ['发达','风啊','分啊'];
+let item = arr.shift();
+console.log(item);
+console.log(arr);
+
+</script> -->
+
+<!-- unshift() 方法
+用于向数组开头添加一个或多个元素，并返回新的长度
+
+-->
+
+<!-- <script>
+let arr= ['发达','风啊','分啊'];
+let count = arr.unshift('阿曼','小八');
+console.log(count);
+console.log(arr);
+
+</script> -->
+
+<!-- sort() 方法
+ 用于对数组的元素进行排序
+ 排序顺序可以是字母或数字，默认排序为按字母升序
+ 会改变原数组的值
+
+-->
+<!-- 
+<script>
+    let arr=['a','d','e','f','c'];
+    console.log(arr.sort());
+
+    let arr_1 = [13,22,41,3];
+    console.log(arr_1.sort())
+    console.log(arr_1)
+</script> -->
+
+<!-- reverse() 方法 
+
+-->
+
+<!-- <script>
+    let arr=[13,41,24,51];
+    console.log(arr.reverse());
+    console.log(arr)
+</script> -->
+
+<!-- 8 concat() 方法
+ 用于连接两个或多个数组
+ 不会改变现有的数组，仅会返回被连接数组的一个副本
+
+-->
+
+<!-- <script>
+    let arr_1=[1,3,5,6,7];
+    let arr_copy = arr_1.concat(8,[10,11]);
+    console.log(arr_copy)
+    console.log(arr_1)
+
+    let arr_copy_1 = arr_1.concat([9,[11,13]]);
+    console.log(arr_copy_1)
+    console.log(arr_copy_1[5])
+</script> -->
+
+<!-- 9 slice() 方法
+ 返回重原数组中指定开始下标到结束下标之间的项组成新数组
+ slice 方法可以接收一或两个参数：要返回项的开始和结束位置
+ 当只有一个参数的时候：slice方法从该参数指定位置开始到当前数组末尾的所有项
+ 两个参数时，返回从起始位置和结束位置之间的项，但---不包括结束位置--的项
+ 当出现负数时，将负数加上数组长度的值来替换该位置的数
+也可以倒序理解，但不是从0开始，如-2为倒数第二个，-3为倒数第三个
+-->
+
+<!-- <script>
+    let arr=[1,3,4,6,7,8,11,22];
+    let arr_1=arr.slice(1);
+    console.log(arr_1)
+    let arr_2=arr.slice(1,5);
+    console.log(arr_2)
+    let arr_3=arr.slice(1,-3);
+    console.log(arr_3)
+    let arr_4 =arr.slice(-4,-1);
+    console.log(arr_4)
+    console.log(arr)
+</script> -->
+
+<!-- 10 splice() 方法
+ 很强大的一个数组方法，可以有几种方法
+ 删除 插入 替换
+
+-->
+ <!-- <script>
+    // 删除--需要两个参数【从哪删，要删几个】
+    let arr=[1,3,5,6,7,2,34,12];
+    let arr_remove=arr.splice(0,2);
+    console.log(arr_remove)
+    console.log(arr)
+
+    // 插入--需要三个参数【从哪删，删几个，要插入的项】
+    let arr_2=[1,3,5,6,7,2,34,12];
+    let arr_2_remove=arr_2.splice(1,0,21,33);
+    console.log(arr_2)
+
+    // // 插入--需要三个参数【从哪删，删几个，要插入的项】
+    let arr_3=[1,3,5,6,7,2,34,12];
+    let arr_3_remove=arr_3.splice(1,1,43);
+    console.log(arr_3)
+ </script> -->
+
+ <!-- 11 indexOf() lastIndexOf()
+  用于查找，会返回查找的项的索引位置（首个索引位置）
+ 用于查找，参数两个【要找谁，从哪找（可选）】
+ 当找不到的时候会返回【-1】，且用的是恒等操作符 ===
+ 
+ -->
+<!-- 
+ <script>
+    let arr=[1,2,34,5,3,1,4,56,7,5,6,7]
+    console.log(arr.indexOf(5))
+    console.log(arr.lastIndexOf(5))
+    console.log(arr.indexOf(5,3))
+    console.log(arr.lastIndexOf(5,4))
+    console.log(arr.indexOf('5'))
+ </script> -->
+
+ <!-- 12 includes 方法
+  用于查找，如果找的这个值存在，返回true，否则返回false
+ -->
+<!-- 
+<script>
+    let arr = [22,33,14,13,51,31];
+    let arr_1 = [22,33,14,13,51,31,arr];
+    console.log(arr_1);
+
+    let arr_2=arr_1.includes(31);
+    console.log(arr_2);
+
+    let arr_3 = arr_1.includes(31,3);
+    console.log(arr_3);
+
+    // 注意：includes()方法使用恒等比较，仅有一个例外，NaN 被认为与自身相等
+    let arr_4=[1,NaN,3];
+    console.log(arr_4.indexOf(NaN))
+    console.log(arr_4.includes(NaN))
+</script> -->
+
+<!-- 13 toString()
+ 将数组转为字符串
+
+-->
+
+<!-- <script>
+    let arr=[22,33,11,4,12]
+    let str_1=arr.toString();
+    console.log(str_1)
+    console.log(str_1.length)
+</script> -->
+
+<!-- 14 copywithin()
+es6新增的从数组的指定位置拷贝到数组的另一个指定位置中。
+改变原数组
+
+
+-->
+
+<script>
+    // 【从索引3的位置开始粘贴，从索引0的位置开始复制，遇到谁停止复制】
+    let arr=[1,2,3,4,5];
+    let arr_1=[1,2,3,arr,5];
+    arr_1.copyWithin(3,0)
+    console.log(arr_1)
+
+    let arr_2=[1,2,3,arr,5,9,17];
+    arr_2.copyWithin(3,0,3)
+    console.log(arr_2)
+</script>

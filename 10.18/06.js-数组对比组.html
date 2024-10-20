@@ -1,0 +1,19 @@
+<!-- 练习_01：给定数组arr = [13,4,-75,-8,22] 
+1、查找出数组中最大值以及最大值的索引
+1、查找出数组中最小值以及最小值的索引 -->
+<script>
+    let arr = [13, 4, -75, -8, 22];
+    // max和min是索引变量，默认第一个元素
+    let max = 0;
+    let min = 0;
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > arr[max]) {
+            max = i;
+        }
+        if (arr[i] < arr[min]) {
+            min = i;
+        }
+    }
+    console.log(`最大值：${arr[max]};索引：${max}}`)
+    console.log(`最小值：${arr[min]};索引：${min}}`)
+</script>
