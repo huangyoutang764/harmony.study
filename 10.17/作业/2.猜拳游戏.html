@@ -1,0 +1,83 @@
+<!-- 思想
+ 题目
+ # 说明：
+# 0：石头	1：剪刀  2：布
+# 玩家通过键盘输入一个0~2的数表示玩家出的是：石头/剪刀/布
+# 电脑通过系统随机生成一个0--2的数表示电脑出拳
+# 请计算出玩家赢还是计算机赢，若不是0~2的数字返回玩家输入错误
+# 随机数生成示例：var num1 = Math.floor(Math.random() * 3);
+（其中num1就是随机数)
+
+floor 为取整
+math.random() 为0~1的随机数，然后×3取整，可随机取得整数0,1,2
+用于电脑的猜拳
+
+玩家输入用prompt方法
+随机输入0,1,2便可
+
+玩家    电脑    
+0       0       平局
+0       1       玩家赢
+0       2       电脑赢
+
+1       0       电脑赢
+1       1       平局
+1       2       玩家赢
+
+0>1
+1>2
+2>0
+
+除开平局外，定一个单位，当满足条件这个单位失败、获胜即可
+如去除平局后，再去除玩家获胜的可能，那剩下的可能为电脑获胜。
+
+-->
+
+<script>
+    // 玩家输入的参数
+    let man_1 = prompt("输入✄，石头，布。输入数字，✄=0，石头=1，布=2 ");
+    // 电脑随机生成的参数
+    let man_2 = Math.floor(Math.random() * 3);// 用整数方法随机生成0,1,2
+
+
+    man_1 = parseInt(man_1);
+
+    if (man_1 < 0 || man_1 > 2) {
+        document.write("输入参数错误，请选择0,1,2 <br/>");
+    }
+    switch (man_1) {
+        case 0: document.write("你输入的为：石头 <br/>");
+            break;
+
+        case 1: document.write("你输入的为：✄ <br/>");
+            break;
+
+        case 2: document.write("你输入的为：布 <br/>");
+            break;
+    }
+    switch (man_2) {
+        case 0: document.write("电脑输入的为：石头 <br/>");
+            break;
+
+        case 1: document.write("电脑输入的为：✄ <br/>");
+            break;
+
+        case 2: document.write("电脑输入的为：布 <br/>");
+            break;
+    }
+
+    document.write("比赛结果为：")
+    // 当两数相等，则平局
+    if (man_1 == man_2) {
+        document.write("平局")
+    }
+    // 玩家获胜的条件
+    else if ((man_1 == 0 && man_2 == 1) || (man_1 == 1 && man_2 == 2) || (man_1 == 2 && man_2 == 0)) {
+        document.write("玩家获胜");
+    }
+    else {
+        document.write("电脑获胜");
+    }
+
+
+</script>

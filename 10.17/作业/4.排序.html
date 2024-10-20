@@ -1,0 +1,43 @@
+<!-- 
+ # 任意输入三个数，利用三元运算符，将这三个数按照从小到大的顺序排列
+
+ 可用类似于冒泡的方法，改变位置，小换大解决。
+-->
+
+<script>
+    let a = prompt("请输入数值a");
+    let b = prompt("请输入数值b");
+    let c = prompt("请输入数值c");
+
+    a = parseInt(a);
+    b = parseInt(b);
+    c = parseInt(c);
+
+    document.write("数值a为：" + a + "<br/>");
+    document.write("数值b为：" + b + "<br/>");
+    document.write("数值c为：" + c + "<br/>");
+
+    
+
+    let d=0;
+    if(a>b){
+        d=a;
+        a=b;
+        b=d;
+    }
+    if(a>c){
+        d=a;
+        a=c;
+        c=d;
+    }
+    if(b>c){
+        d=b;
+        b=c;
+        c=d;
+    }
+    
+    document.write("小到大排序为："+a+"&nbsp"+b+"&nbsp"+c);
+
+    
+
+</script>

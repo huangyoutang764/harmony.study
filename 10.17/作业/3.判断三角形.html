@@ -1,0 +1,30 @@
+<!-- 
+ # 任意输入三个数值，判断能否生成一个三角形
+# 提示：三角形（任意两边之和大于第三边）
+
+边长    a
+边长    b
+边长    C
+-->
+
+<script>
+    let a = prompt("请三角形的边长a");
+    let b = prompt("请三角形的边长b");
+    let c = prompt("请三角形的边长c");
+
+    a = parseInt(a);
+    b = parseInt(b);
+    c = parseInt(c);
+
+    document.write("边长a为：" + a + "<br/>");
+    document.write("边长b为：" + b + "<br/>");
+    document.write("边长c为：" + c + "<br/>");
+
+    if (a + b > c && a + c > b && b + c > a) {
+        document.write("可组成一个三角形");
+    }
+    else {
+        document.write("无法组成一个三角形");
+    }
+
+</script>

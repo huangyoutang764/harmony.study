@@ -1,0 +1,36 @@
+<!-- 
+ # 编写程序，输入长方形的宽与高，输出这个长方形的周长与面积。   
+
+ 简单的加减乘除
+
+ 宽     a
+ 高     b
+
+ 周长   （a+b）*2
+ 面积     a*b
+-->
+
+<script>
+    let a = prompt("请输入长方形宽");
+    let b = prompt("请输入长方形高");
+
+    a = parseInt(a);
+    b = parseInt(b);
+
+    // 图形的边长必须大于等于0，为0是则表示没有
+    if (a >= 0 && b >= 0) {
+        document.write("长方形宽：" + a + "<br/>");
+        document.write("长方形高：" + b + "<br/>");
+
+        document.write("长方形周长为：" + (a + b) * 2 + "<br/>");
+        document.write("长方形面积为：" + a * b + "<br/>");
+    }
+    else{
+        document.write("图像数值输入错误，图像边长应为正数")
+    }
+
+
+
+
+
+</script>

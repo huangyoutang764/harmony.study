@@ -1,0 +1,28 @@
+<!-- 
+ # 输入某位学生的三科考试成绩，输出这个学生的三门成绩的 总分、平均分；   
+
+ 简单乘除
+ 分数应不为负数
+-->
+
+<script>
+    let a = prompt("输入科目一的分数：");
+    let b = prompt("输入科目二的分数：");
+    let c = prompt("输入科目三的分数：");
+
+    a = parseInt(a);
+    b = parseInt(b);
+    c = parseInt(c);
+
+    document.write("科目一分数为：" + a + "<br/>");
+    document.write("科目二分数为：" + b + "<br/>");
+    document.write("科目三分数为：" + c + "<br/>");
+
+    if (a < 0 || b < 0 || c < 0){
+        document.write("输入的分数异常，请重新输入！")
+    }
+    else{
+        document.write("三门科目的总分为："+(a+b+c)+ "<br/>");
+        document.write("三门科目的均分分为："+(a+b+c)/3+ "<br/>");
+    }
+</script>

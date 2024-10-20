@@ -1,0 +1,95 @@
+<!-- 
+switch 循环 
+switch语句判断比较适合的情况不多，而且都是单个固定数据的判断
+switch语句会先执行小括号中的表达式，得到最终结果
+然后将最终结果带入到内部，与每一个case后的值进行==的判定
+如果成立，就执行代码，然后遇到break跳出判断
+如果不成立，就进行下一个
+
+-->
+
+<!-- <script>
+    let level='D';
+    switch(level){
+        case 'A':document.write('真棒！')
+        break;
+
+        case 'B':document.write('不错！')
+        break;
+
+        case 'C':document.write('还行！')
+        break;
+
+        default:document.write('??????????')
+        break
+    }
+</script> -->
+<!-- 实际开发中，使用switch的情况不多，都不愿意用switch
+    代码可读性 以及 编辑 不如if方便
+    只有一个特殊的特性，贯穿
+    当case中没有break，代码从一个case执行到另一个case
+
+-->
+
+<!-- <script>
+    // 利用switch贯穿，实现年月的返回天数
+    let y = 2007, m = 2;
+    switch (m) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12: document.write("31天");
+            break;
+
+        case 4:
+        case 6:
+        case 9:
+        case 11: document.write("30天")
+            break;
+
+        case 2:
+            if ((y % 4 == 0 && y % 100 > 0) || y % 400 == 0) {
+                document.write("29天")
+            }
+            else (document.write("28天"))
+            break;
+
+        default: document.write("月份错误，请重新输入！！！")
+            break;
+
+    }
+</script> -->
+
+<script>
+    // 利用switch贯穿，完成如下联系
+    // 给定变量 年：y 月：m 日：d
+    // 运算出这一天是这一年的第几天
+    let y = 2020, m = 1, d = 7;
+    let sum = 0;
+    switch (m - 1) {
+        case 11: sum += 30;// sum=sum+30
+        case 10: sum += 31;
+        case 9: sum += 30;
+        case 8: sum += 31;
+        case 7: sum += 31;
+        case 6: sum += 30;
+        case 5: sum += 31;
+        case 4: sum += 30;
+        case 3: sum += 31;
+        case 2:
+            if ((y % 4 == 0 && y % 100 > 0) || y % 400 == 0) {
+                sum += 29;
+            }
+            else (sum += 28)
+        case 1: sum += 31;
+        case 0: sum += 0;// 需要添加，不然一月份内的天数无法显示
+
+            sum = sum + d;
+            document.write(sum)
+
+    }
+
+</script>
